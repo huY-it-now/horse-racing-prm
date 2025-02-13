@@ -1,15 +1,9 @@
 package com.theanimegroup.horse_racing_client.controller;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.theanimegroup.horse_racing_client.R;
-
-import java.util.Random;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -26,23 +20,18 @@ public class ResultActivity extends AppCompatActivity {
 
         double betAmount = getIntent().getDoubleExtra("betAmount", 0);
         int selectedHorse = getIntent().getIntExtra("selectedHorse", 1);
+        int winningHorse = getIntent().getIntExtra("winningHorse", -1);
+        boolean userWon = getIntent().getBooleanExtra("won", false);
 
-        // Simulating a winning horse
-        int winningHorse = new Random().nextInt(3) + 1; // 1 to 3
-        winnerTextView.setText("Winner Horse: Horse " + winningHorse);
+        winnerTextView.setText("Winner: Horse " + winningHorse);
 
-        if (selectedHorse == winningHorse) {
-            double winnings = betAmount * 2; // Double the bet amount
+        if (userWon) {
+            double winnings = betAmount * 2;
             winningsTextView.setText("You won: $" + winnings);
         } else {
             winningsTextView.setText("You lost: $" + betAmount);
         }
 
-        backTextView.setOnClickListener(v -> {
-            // Return to HomeActivity
-            finish();
-        });
+        backTextView.setOnClickListener(v -> finish());
     }
 }
-
-

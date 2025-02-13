@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Background View -->
         <View
             android:id="@+id/view2"
             android:layout_width="match_parent"
@@ -18,29 +19,42 @@
             android:layout_marginTop="59dp"
             android:background="@drawable/race_road" />
 
+        <!-- SeekBar 1 -->
         <SeekBar
             android:id="@+id/seekBar"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="80dp"
-            android:thumb="@drawable/horse_pixel1"/>
+            android:progressDrawable="@drawable/custom_seekbar_progress"
+            android:thumb="@drawable/horse_pixel1"
+            android:max="100"
+            android:progress="0" />
 
+        <!-- SeekBar 2 -->
         <SeekBar
             android:id="@+id/seekBar2"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_below="@id/seekBar"
             android:layout_marginTop="40dp"
-            android:thumb="@drawable/horse_pixel2"/>
+            android:progressDrawable="@drawable/custom_seekbar_progress"
+            android:thumb="@drawable/horse_pixel2"
+            android:max="100"
+            android:progress="0" />
 
+        <!-- SeekBar 3 -->
         <SeekBar
             android:id="@+id/seekBar3"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_below="@id/seekBar2"
             android:layout_marginTop="30dp"
-            android:thumb="@drawable/horse_pixel3"/>
+            android:progressDrawable="@drawable/custom_seekbar_progress"
+            android:thumb="@drawable/horse_pixel3"
+            android:max="100"
+            android:progress="0" />
 
+        <!-- Bottom Panel -->
         <RelativeLayout
             android:layout_width="409dp"
             android:layout_height="448dp"
@@ -53,8 +67,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="241dp"
                 android:background="#80D3D3D3"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
+                <!-- Money and Bet Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -64,9 +80,8 @@
 
                     <TextView
                         android:id="@+id/textView4"
-                        android:layout_width="149dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="9dp"
                         android:layout_weight="1"
                         android:text="Money:"
                         android:textSize="20sp"
@@ -74,7 +89,7 @@
 
                     <EditText
                         android:id="@+id/editTextNumber3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_background"
@@ -83,9 +98,8 @@
 
                     <TextView
                         android:id="@+id/textView"
-                        android:layout_width="147dp"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
                         android:layout_weight="1"
                         android:text="Bet: ($)"
                         android:textSize="19sp"
@@ -93,15 +107,15 @@
 
                     <EditText
                         android:id="@+id/betAmount"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_background"
                         android:ems="10"
                         android:inputType="number" />
-
                 </LinearLayout>
 
+                <!-- Horse 1 Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
@@ -109,13 +123,13 @@
 
                     <CheckBox
                         android:id="@+id/horse1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Horse 1"
@@ -123,15 +137,15 @@
 
                     <EditText
                         android:id="@+id/editTextNumber4"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_background"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>
 
+                <!-- Horse 2 Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="68dp"
@@ -139,13 +153,13 @@
 
                     <CheckBox
                         android:id="@+id/horse2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Horse 2"
@@ -153,15 +167,15 @@
 
                     <EditText
                         android:id="@+id/editTextNumber5"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_background"
                         android:ems="10"
                         android:inputType="number" />
                 </LinearLayout>
 
+                <!-- Horse 3 Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
@@ -169,13 +183,13 @@
 
                     <CheckBox
                         android:id="@+id/horse3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Horse 3"
@@ -183,9 +197,8 @@
 
                     <EditText
                         android:id="@+id/editTextNumber"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
                         android:layout_weight="1"
                         android:background="@drawable/edit_text_background"
                         android:ems="10"
@@ -194,6 +207,7 @@
 
             </LinearLayout>
 
+            <!-- Buttons Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="112dp"
@@ -204,11 +218,12 @@
 
                 <TextView
                     android:id="@+id/tvGo"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="77dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="1"
                     android:background="@drawable/button_gradient_border"
                     android:clickable="true"
                     android:fontFamily="monospace"
@@ -222,7 +237,7 @@
 
                 <TextView
                     android:id="@+id/tvCash"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="77dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="20dp"
@@ -242,6 +257,5 @@
 
         </RelativeLayout>
     </RelativeLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
